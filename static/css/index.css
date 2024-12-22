@@ -15,7 +15,7 @@
         ), hsl(240, 2%, 13%);
         --bg-gradient-yellow-1: linear-gradient(
           to bottom right, 
-          hsl(0, 100%, 50%) 0%, 
+          hsl(0, 0%, 100%) 0%, 
           hsla(36, 100%, 69%, 0) 50%
         );
         --bg-gradient-yellow-2: linear-gradient(
@@ -43,7 +43,7 @@
         --smoky-black: hsl(0, 0%, 7%);
         --white-1: hsl(0, 0%, 100%);
         --white-2: hsl(0, 0%, 98%);
-        --orange-yellow-crayola: hsl(55, 100%, 50%);
+        --orange-yellow-crayola: hsl(0, 100%, 50%);
         --vegas-gold: hsl(45, 54%, 58%);
         --light-gray: hsl(0, 0%, 84%);
         --light-gray-70: hsla(0, 0%, 84%, 0.7);
@@ -224,7 +224,7 @@
         padding-bottom: 7px;
       }
       
-      .article-title::after {
+      /* .article-title::after {
         content: "";
         position: absolute;
         bottom: 0;
@@ -233,7 +233,7 @@
         height: 3px;
         background: var(--text-gradient-yellow);
         border-radius: 3px;
-      }
+      } */
       
       .has-scrollbar::-webkit-scrollbar {
         width: 5px; /* for vertical scrollbar */
@@ -747,7 +747,7 @@
         font-weight: var(--fw-400);
         line-height: 1.6;
       }
-      
+/*       
       .timeline-item:not(:last-child)::before {
         content: "";
         position: absolute;
@@ -769,7 +769,7 @@
         border-radius: 50%;
         box-shadow: 0 0 0 4px var(--jet);
       }
-      
+       */
       .timeline-text {
         color: var(--light-gray);
         font-weight: var(--fw-300);
@@ -1239,10 +1239,10 @@
           padding-bottom: 15px;
         }
       
-        .article-title::after {
+        /* .article-title::after {
           width: 40px;
           height: 5px;
-        }
+        } */
       
         .icon-box {
           width: 48px;
@@ -1418,7 +1418,7 @@
          * #RESUME
          */
       
-        .timeline-list { margin-left: 65px; }
+        /* .timeline-list { margin-left: 65px; }
       
         .timeline-item:not(:last-child)::before { left: -40px; }
       
@@ -1426,7 +1426,7 @@
           height: 8px;
           width: 8px;
           left: -43px;
-        }
+        } */
       
         .skills-item:not(:last-child) { margin-bottom: 25px; }
       
