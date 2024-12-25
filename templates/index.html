@@ -10,7 +10,7 @@
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="../static/images/logo.ico" type="image/x-icon">
+  <!-- <link rel="shortcut icon" href="../static/images/logo.ico" type="image/x-icon"> -->
 
   <!--
     - custom css link
@@ -24,26 +24,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-
-<body>
+<body style="background-color: rgb(145, 145, 145);">
   <main>
 
     <!--
       - #SIDEBAR
     -->
 
-    <aside class="sidebar" data-sidebar>
+    <aside class="sidebar" data-sidebar style="background-color:rgb(0, 0, 0);">
 
       <div class="sidebar-info">
 
         <div class="avatar-box">
-          <img src="../static/images/my-avatar.png" alt="Abhishek Binish" width="80">
+          <img src="../static/images/my_img.png" alt="Abhishek Binish" width="80" style="border-radius: 20px; ">
         </div>
 
         <div class="info-content">
           <h1 class="name" title="Abhishek Binish">Abhishek Binish</h1>
 
-          <p class="title">Full Stack Developer | Fresher</p>
+          <p class="title">Web Developer | Fresher</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -63,7 +62,7 @@
           <li class="contact-item">
 
             <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
+              <img src="../static/images/email (3).png" alt="" style="width: 95%; height:auto;">
             </div>
 
             <div class="contact-info">
@@ -77,7 +76,7 @@
           <li class="contact-item">
 
             <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
+              <img src="../static/images/phone.png" alt="" style="width: 95%; height:auto; background-color: white;border-radius: 10px;">
             </div>
 
             <div class="contact-info">
@@ -91,7 +90,7 @@
           <li class="contact-item">
 
             <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
+              <img src="../static/images/schedule.png" alt="" style="width: 95%; height:auto; border-radius: 10px;">
             </div>
 
             <div class="contact-info">
@@ -105,13 +104,13 @@
           <li class="contact-item">
 
             <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
+              <img src="../static/images/map.png" alt="" style="width: 95%; height:auto;border-radius: 10px;">
             </div>
 
             <div class="contact-info">
               <p class="contact-title">Location</p>
 
-              <address>Thodupuzha-Idukki, kerala, India</address>
+              <address>Thodupuzha-Idukki, Kerala, India</address>
             </div>
 
           </li>
@@ -192,7 +191,7 @@
         - #ABOUT
       -->
 
-      <article class="about  active" data-page="about">
+      <article class="about  active" data-page="about" style="background-color: black;">
 
         <header>
           <h2 class="h2 article-title">About me</h2>
@@ -213,10 +212,7 @@
         </section>
 
 
-        <!--
-          - service
-        -->
-
+<!-- ------------------------what im doing----------------------------- -->
         <section class="service">
 
           <h3 class="h3 service-title">What i'm doing</h3>
@@ -226,8 +222,7 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="../static/images/icon-design.svg
-                " alt="design icon" width="40">
+                <img src="../static/images/app.png" alt="design icon" width="40">
               </div>
 
               <div class="service-content-box">
@@ -243,14 +238,14 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="../static/images/icon-dev.svg" alt="Web development icon" width="40">
+                <img src="../static/images/app-development.png" alt="Web development icon" width="40">
               </div>
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Web Development</h4>
 
                 <p class="service-item-text">
-                  High-quality development of sites at the professional level.
+                  High-quality development of Web applications at the professional level.
                 </p>
               </div>
 
@@ -259,14 +254,14 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="../static/images/icon-app.svg" alt="mobile app icon" width="40">
+                <img src="../static/images/api.png" alt="api icon" width="40">
               </div>
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">API Development</h4>
 
                 <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
+                  Delivering high-quality API development with focus on performance and scalability.
                 </p>
               </div>
 
@@ -275,14 +270,14 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="../static/images/icon-photo.svg" alt="camera icon" width="40">
+                <img src="../static/images/hosting.png" alt="Web hosting icon" width="40">
               </div>
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Web Hosting</h4>
 
                 <p class="service-item-text">
-                  I make high-quality photos of any category at a professional level.
+                  Delivering secure and efficient web hosting services for seamless online presence.
                 </p>
               </div>
 
@@ -321,13 +316,18 @@
         - #RESUME
       -->
 
-      <article class="resume" data-page="resume">
+      <article class="resume" data-page="resume"  style="background-color: black;">
 
         <header>
           <h2 class="h2 article-title">Resume</h2>
         </header>
 
-        <section class="timeline">
+        <div class="image-container">
+          <img src="../static/images/blured_my_cv.png" alt="" style="width: 45%; max-height:75vh; height:60%; border-radius: 8px;object-fit:fill;display: block; margin: auto;">
+          <button class="button" onclick="openPDF()" >Open PDF</button>
+        </div>
+
+        <!-- <section class="timeline">
 
           <div class="title-wrapper">
             <div class="icon-box">
@@ -440,7 +440,10 @@
 
           </ol>
 
-        </section>
+        </section> -->
+
+
+
 
         <!-- <section class="skill">
 
@@ -514,7 +517,7 @@
         - #PORTFOLIO
       -->
 
-      <article class="portfolio" data-page="portfolio">
+      <article class="portfolio" data-page="portfolio"  style="background-color: black;">
 
         <header>
           <h2 class="h2 article-title">Portfolio</h2>
@@ -522,57 +525,21 @@
 
         <section class="projects">
 
-          <ul class="filter-list">
 
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
 
           <div class="filter-select-box">
 
             <button class="filter-select" data-select>
 
-              <div class="select-value" data-selecct-value>Select category</div>
+              <!-- <div class="select-value" data-selecct-value>Select category</div> -->
 
-              <div class="select-icon">
+              <!-- <div class="select-icon">
                 <ion-icon name="chevron-down"></ion-icon>
-              </div>
+              </div> -->
 
             </button>
 
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
-            </ul>
+  
 
           </div>
 
@@ -671,7 +638,7 @@
 
 <!-- --------------------------------------------Contact page starting from here---------------------------------------------------------- -->
 
-      <article class="contact" data-page="contact">
+      <article class="contact" data-page="contact"  style="background-color: black;">
 
         <header>
           <h2 class="h2 article-title">Contact</h2>
