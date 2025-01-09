@@ -135,7 +135,7 @@
       color: var(hsl(0, 0%, 7%));
     }
     
-    :focus { outline-color:  hsl(45, 100%, 72%); }
+    :focus { outline-color:  hsl(0, 100%, 72%); }
     
     html { font-family: 'Poppins', sans-serif; }
     
@@ -363,7 +363,7 @@
     }
     
     .info_more-btn:hover,
-    .info_more-btn:focus { background:  hsl(0, 100%, 46%); }
+    .info_more-btn:focus { background:  hsl(0, 0%, 22%); }
     
     .info_more-btn:hover::before,
     .info_more-btn:focus::before { background:  hsla(35, 100%, 68%, 0); }
@@ -780,7 +780,7 @@
     }
     
     .timeline-list span {
-      color: hsl(45, 54%, 58%);
+      color: hsl(0, 54%, 58%);
       font-weight: var(--fw-400);
       line-height: 1.6;
     }
@@ -1138,6 +1138,7 @@
     
     .form-input {
       color:  rgb(255, 255, 255);
+      background-color: black;
       font-size: var(--fs-6);
       font-weight: var(--fw-400);
       padding: 13px 20px;
@@ -1166,7 +1167,7 @@
       position: relative;
       width: 100%;
       background: hsla(0, 0%, 25%, 0);
-      color:  hsl(45, 100%, 72%);
+      color:  hsl(0, 0%, 100%);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -1192,19 +1193,19 @@
     
     .form-btn ion-icon { font-size: 16px; }
     
-    .form-btn:hover { background:   hsl(45, 100%, 71%); }
+    .form-btn:hover { background:   hsl(0, 0%, 58%); }
     
     .form-btn:hover::before { background: hsla(35, 100%, 68%, 0); }
     
-    .form-btn:disabled {
+    /* .form-btn:disabled {
       opacity: 0.7;
       cursor: not-allowed;
-    }
+    } */
     
-    .form-btn:disabled:hover { background:  hsla(0, 0%, 25%, 0); }
+    /* .form-btn:disabled:hover { background:  hsla(0, 0%, 25%, 0); }
     
     .form-btn:disabled:hover::before { background:  hsla(240, 2%, 11%, 0) ; }
-    
+     */
     
     
     
