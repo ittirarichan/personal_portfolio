@@ -68,7 +68,7 @@
       --fs-5: 15px;
       --fs-6: 14px;
       --fs-7: 13px;
-      --fs-8: 11px;
+      --fs-8: 16px;
     
       /* font-weight */
       --fw-300: 300;
@@ -344,7 +344,7 @@
       right: -15px;
       border-radius: 0 15px;
       font-size: 13px;
-      color:  hsl(45, 100%, 72%);
+      color:  hsl(0, 0%, 100%);   
       background:  hsla(0, 0%, 25%, 0);
       padding: 10px;
       box-shadow: var(--shadow-2);
@@ -457,6 +457,7 @@
       justify-content: center;
       align-items: center;
       padding: 0 10px;
+      gap: 13px;
     }
     
     .navbar-link {
@@ -780,7 +781,7 @@
     }
     
     .timeline-list span {
-      color: hsl(0, 54%, 58%);
+      color: hsl(0, 100%, 50%);
       font-weight: var(--fw-400);
       line-height: 1.6;
     }
@@ -802,7 +803,7 @@
       left: -33px;
       height: 6px;
       width: 6px;
-      background: hsl(35, 100%, 68%);
+      background: hsl(192, 100%, 50%);
       border-radius: 50%;
       box-shadow: 0 0 0 4px var(hsl(0, 0%, 22%));
     }
@@ -1341,7 +1342,7 @@
         font-size: var(--fs-8);
       }
     
-      .info_more-btn ion-icon { display: none; }
+      .info_more-btn ion-button { display: none; }
     
       .separator { margin: 32px 0; }
     
@@ -1907,4 +1908,51 @@
 
   .image-container .button:hover {
       background-color: hsl(0, 100%, 33%);
+  }
+
+
+
+
+  
+/* -------------------------------pdf----------------------------------------- */
+
+  .pdf-button {
+      background: linear-gradient(45deg, #ff0000, #00c8ff);
+      color: white;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+  }
+  
+  .pdf-button:before {
+      content: "📄";
+      font-size: 20px;
+  }
+  
+  .pdf-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+      background: linear-gradient(45deg, #00c8ff, #ff0000);
+  }
+  
+  .pdf-button:active {
+      transform: translateY(1px);
+  }
+  
+  .button-container {
+    display: flex;          /* Allows centering of content */
+    justify-content: center; /* Centers the button horizontally */
+    align-items: center;    /* Aligns the button vertically */
+    margin: 25px 0;         /* Adds top and bottom spacing */
+    padding: 10px;          /* Adds inner padding for aesthetics */
   }

@@ -1,10 +1,24 @@
-from flask import Flask,render_template ,request,redirect,url_for   #Flask  (classname)
-app = Flask(__name__)
+from flask import Flask, render_template, request, redirect, url_for  # Flask (classname)
+from flask_mail import Mail, Message
 import sqlite3
 
-con=sqlite3.connect('database.db')
+app = Flask(__name__)
+
+# Email configuration
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
+app.config['MAIL_USERNAME'] = 'abhishekbinish86@gmail.com'  # Your email address
+app.config['MAIL_PASSWORD'] = 'xewq osgl gtnw sinz'  # Your email password
+app.config['MAIL_DEFAULT_SENDER'] = 'abhishekbinish86@gmail.com'
+
+mail = Mail(app)
+
+# Database setup
+con = sqlite3.connect('database.db')
 try:
-    con.execute('create table contact (name TEXT , email TEXT , phone TEXT , message TEXT)')
+    con.execute('CREATE TABLE contact (name TEXT, email TEXT, phone TEXT, message TEXT)')
 except:
     pass
 
@@ -13,20 +27,39 @@ def fun1():
     return render_template("index.html")
 
 
-@app.route('/',methods=['POST','GET'])
+@app.route('/', methods=['POST', 'GET'])
 def fun2():
-    if request.method=='POST':
-        name=request.form['name']
-        email=request.form['email']
-        phone=request.form['number']
-        message=request.form['message']
-        con=sqlite3.connect('database.db')
-        con.execute("insert into contact(name,email,phone,message)values(?,?,?,?)",(name,email,phone,message))
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        phone = request.form['number']
+        message = request.form['message']
+        
+        # Save to database
+        con = sqlite3.connect('database.db')
+        con.execute("INSERT INTO contact(name, email, phone, message) VALUES (?, ?, ?, ?)", 
+                    (name, email, phone, message))
         con.commit()
-        print(name,email,phone,message)
+        
+        # Send email
+        msg = Message(
+            subject='Connect through Portfolio',
+            recipients=['abhishekbinish86@gmail.com'],  # Change to your recipient email
+            body=f"""
+            Connect through Portfolio:
+            Name: {name}
+            Email: {email}
+            Phone: {phone}
+            Message: {message}
+            """
+        )
+        mail.send(msg)
+        
+        print(name, email, phone, message)
         return redirect(url_for('fun1'))
     else:
         return render_template('index.html')
 
 
-app.run()
+if __name__ == '__main__':
+    app.run(debug=True)
