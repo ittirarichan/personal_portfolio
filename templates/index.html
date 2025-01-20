@@ -36,7 +36,7 @@
       <div class="sidebar-info">
 
         <div class="avatar-box">
-          <img src="../static/images/my_img.png" alt="Abhishek Binish" width="80" style="border-radius: 20px; ">
+          <img src="../static/images/my_img.png" alt="Abhishek Binish" onclick="viewFullscreen(this.src)" width="80" style="border-radius: 20px; ">
         </div>
 
         <div class="info-content">
@@ -631,7 +631,10 @@
 
 
 
-
+  <div id="fullscreen-image" onclick="closeFullscreen()">
+    <span>&times;</span>
+    <img src="../static/images/my_img.png" alt="Fullscreen View">
+  </div>
 
 
   <!--

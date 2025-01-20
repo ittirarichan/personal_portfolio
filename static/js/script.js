@@ -91,3 +91,19 @@ function openPDF() {
   const pdfUrl = '../static/images/ABHISHEK_BINISH_CV.pdf'; // Replace with your PDF file path
   window.open(pdfUrl, '_blank');
 }
+
+
+
+
+
+function viewFullscreen(src) {
+  const fullscreenDiv = document.getElementById('fullscreen-image');
+  const fullscreenImg = fullscreenDiv.querySelector('img');
+  fullscreenImg.src = src;
+  fullscreenDiv.style.display = 'flex';
+}
+
+function closeFullscreen() {
+  const fullscreenDiv = document.getElementById('fullscreen-image');
+  fullscreenDiv.style.display = 'none';
+}
